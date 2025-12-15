@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Woodson Chelot Blanc — Full-Stack Developer</title>
+
+    <!-- Enable JS-safe animations -->
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- Inter Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation menu">
+    <div class="container">
+        <a href="#hero" class="logo">
+            <span class="highlight">Woodson</span> Dev
+        </a>
+
+        <div class="nav-links" id="navLinks" role="menubar">
+            <a href="#about" role="menuitem">About</a>
+            <a href="#skills" role="menuitem">Skills</a>
+            <a href="#projects" role="menuitem">Projects</a>
+            <a href="#contact" role="menuitem">Contact</a>
+
+            <button id="theme-toggle" aria-label="Toggle dark/light theme"
+                    role="switch" aria-checked="false" type="button">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+
+        <button class="burger-menu" id="burgerMenu"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false" type="button">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </button>
+    </div>
+</nav>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section id="hero" class="hero-section" aria-labelledby="hero-heading">
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="hero-text">
+                <h1 id="hero-heading">Full-Stack Developer & System Architect</h1>
+
+                <p class="lead">
+                    I design, build, and deploy complete digital systems — from modern user interfaces
+                    to robust backend architecture, automation, APIs, dashboards, and cloud deployment.
+                    Founder of <span class="highlight">English Club for USA</span>,
+                    I create <span id="dynamic-text" class="highlight">modern, scalable</span> web platforms.
+                </p>
+
+                <div class="social-links">
+                    <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/5094940210" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <a href="#projects" class="btn btn-primary">
+                    View Projects <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="assets/WOODSON-RESUME.pdf" target="_blank" class="btn btn-secondary">
+                    Download Resume <i class="fas fa-download"></i>
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/woodson.jpg"
+                     alt="Portrait of Woodson Chelot Blanc"
+                     class="profile-pic"
+                     width="300" height="300">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+    <div class="container">
+        <h2>About Me</h2>
+
+        <div class="about-content">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+                 alt="Developer working on system architecture"
+                 class="about-img">
+
+            <div>
+                <h3>Who I Am</h3>
+                <p>
+                    I’m <strong class="highlight">Woodson Chelot Blanc</strong>, a self-taught
+                    full-stack developer and system architect. I specialize in building
+                    complete platforms from scratch with clean code, performance, and scalability in mind.
+                </p>
+
+                <h3>Founder — English Club for USA</h3>
+                <p>
+                    I created English Club for USA in 2023, a full online learning platform used
+                    across multiple countries. I built every core feature myself:
+                    authentication, exams, certificates, PDFs, automation, dashboards, and server infrastructure.
+                </p>
+
+                <h3>My Mission</h3>
+                <p>
+                    To build powerful digital systems that create real opportunities
+                    and positively impact communities.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<!-- SKILLS -->
+<section id="skills" class="skills-section">
+    <div class="container">
+        <h2>My Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>HTML5 / CSS3 / Flexbox / Grid</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Responsive & Accessible UI</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <ul>
+                    <li>PHP / Laravel</li>
+                    <li>REST APIs</li>
+                    <li>Authentication & Authorization</li>
+                    <li>PDF Generation (DOMPDF / TCPDF)</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Server & Cloud</h3>
+                <ul>
+                    <li>MySQL / Percona</li>
+                    <li>Nginx / CloudPanel</li>
+                    <li>VPS Deployment & SSL</li>
+                    <li>DNS & Performance Optimization</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects-section">
+    <div class="container">
+        <h2>Featured Project</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+                         alt="English Club for USA system dashboard">
+                </figure>
+
+                <h3>English Club for USA</h3>
+                <p>
+                    A complete learning ecosystem with online courses, exams, certificates,
+                    student verification, dashboards, email automation, and admin tools —
+                    fully designed and developed by me.
+                </p>
+
+                <div class="project-tech">
+                    <span>Laravel</span>
+                    <span>MySQL</span>
+                    <span>Nginx</span>
+                    <span>CloudPanel</span>
+                    <span>HTML / CSS / JS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2>Get In Touch</h2>
+
+        <p class="contact-intro">
+            Interested in collaboration, freelance work, or building a powerful digital system?
+            Let’s talk.
+        </p>
+
+        <address class="contact-details">
+            <p><i class="fas fa-envelope"></i>
+                <a href="mailto:woodsonblanc83@gmail.com">woodsonblanc83@gmail.com</a>
+            </p>
+            <p><i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/5094940210">+509 49 40 210</a>
+            </p>
+        </address>
+
+        <div class="contact-actions">
+            <a href="https://wa.me/5094940210" class="btn btn-primary">
+                Message Me <i class="fas fa-paper-plane"></i>
+            </a>
+            <a href="assets/WOODSON-RESUME.pdf" target="_blank" class="btn btn-secondary">
+                Download Resume <i class="fas fa-file-download"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; <span id="current-year">2025</span> Woodson Chelot Blanc. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<!-- Main JS -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
