@@ -3,9 +3,9 @@
  */
 :root {
     /* 1. Base Color Palette */
-    --primary-color: #0077b6; /* Professional Blue */
-    --secondary-color: #00b4d8; /* Light Blue accents */
-    --accent-color: #ff9f1c; /* Warm Orange highlights */
+    --primary-color: #0077b6;
+    --secondary-color: #00b4d8;
+    --accent-color: #ff9f1c;
 
     /* 2. Spacing & Sizing */
     --max-width: 1200px;
@@ -21,10 +21,9 @@
     --border-color-light: rgba(0, 0, 0, 0.1);
     --shadow-dark: rgba(255, 255, 255, 0.15);
     --border-color-dark: rgba(255, 255, 255, 0.15);
-    --card-shadow: 0 4px 12px var(--shadow);
-    --hover-shadow-glow: rgba(0, 119, 182, 0.4); /* New subtle glow for hover effects */
+    --hover-shadow-glow: rgba(0, 119, 182, 0.4);
 
-    /* 4. Light Mode Theme (Default) */
+    /* 4. LIGHT MODE (DEFAULT) */
     --bg-color: #f4f7f9;
     --text-color: #333;
     --section-bg: #e5e5e5;
@@ -37,23 +36,7 @@
     --mobile-menu-bg: var(--header-bg);
 }
 
-/* Dark Mode Variables (Toggled and prefers-color-scheme) */
-@media (prefers-color-scheme: dark) {
-    :root:not(.light-mode) {
-        --bg-color: #1a1a2e;
-        --text-color: #e0e0e0;
-        --section-bg: #22223b;
-        --card-bg: #333355;
-        --header-bg: #0d0d1a;
-        --header-text: #ffffff;
-        --shadow: var(--shadow-dark);
-        --border-color: var(--border-color-dark);
-        --hero-gradient-end: #1f2746;
-        --mobile-menu-bg: var(--header-bg);
-        --hover-shadow-glow: rgba(0, 180, 216, 0.4); /* Adjusted glow for dark mode */
-    }
-}
-
+/* ✅ DARK MODE (JS CONTROLLED ONLY — SAFE) */
 body.dark-mode {
     --bg-color: #1a1a2e;
     --text-color: #e0e0e0;
@@ -68,20 +51,6 @@ body.dark-mode {
     --hover-shadow-glow: rgba(0, 180, 216, 0.4);
 }
 
-body.light-mode {
-    --bg-color: #f4f7f9;
-    --text-color: #333;
-    --section-bg: #e5e5e5;
-    --card-bg: #ffffff;
-    --header-bg: #03045e;
-    --header-text: #e0e0e0;
-    --shadow: var(--shadow-light);
-    --border-color: var(--border-color-light);
-    --hero-gradient-end: #005f8e;
-    --mobile-menu-bg: var(--header-bg);
-    --hover-shadow-glow: rgba(0, 119, 182, 0.4);
-}
-
 /*
  * --- General Styles ---
  */
@@ -92,19 +61,30 @@ body.light-mode {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+
+    /* ✅ SAFETY FALLBACKS */
+    color: var(--text-color, #ffffff);
+    background-color: var(--bg-color, #0d0d1a);
+
     scroll-behavior: smooth;
     transition: background-color var(--transition-time), color var(--transition-time);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
 }
+
 body.no-scroll {
     overflow: hidden;
 }
+
+/* =============================
+   EVERYTHING BELOW IS UNCHANGED
+   (Layout, navbar, hero, etc.)
+   ============================= */
+
+/* keep all your existing CSS exactly as-is below this line */
 
 a:focus-visible,
 button:focus-visible {
